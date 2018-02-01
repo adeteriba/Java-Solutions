@@ -1,0 +1,36 @@
+// Find the outlier of 3 numbers. The three numbers will be entered through user input
+
+import java.util.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception 
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int z = sc.nextInt();
+        
+        int avg= (x+y+z)/3;
+        
+        int OneDiff = Math.abs(x - avg);
+        int TwoDiff = Math.abs(y - avg);
+        int ThreeDiff = Math.abs(z - avg);
+        
+        if (OneDiff > TwoDiff && OneDiff > ThreeDiff) {
+            System.out.println(num1);
+        }
+        else if (TwoDiff > OneDiff && TwoDiff > ThreeDiff) {
+            System.out.println(num2);
+        }
+        else if (ThreeDiff > TwoDiff && ThreeDiff > OneDiff) {
+            System.out.println(num3);
+        }
+        else {
+            System.out.println("NA");
+        }
+    }
+}
+
+
+
