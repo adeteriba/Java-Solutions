@@ -1,5 +1,5 @@
-//To find the mode, first put the numbers in order, then count how many of each number. 
-//A number that appears most often is the mode.
+// To find the mode, first put the numbers in order, then count how many of each number. 
+// Mode is the number that appears most often is the mode.
 
 import java.util.*;
 
