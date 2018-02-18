@@ -1,3 +1,8 @@
+/* The program takes in a line from the user
+	Prints the sentence in ASCII and
+	Each letter in the sentence and its frequency 
+	*/
+
 import java.util.*;
 public final class ASCII {
 	public static void main(String[] args){
