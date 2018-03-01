@@ -1,0 +1,73 @@
+import java.util.*;
+public class QuickSort {
+	private static int[] theArray;
+	
+	private static int arraySize; 	// Integer to store the size of the array
+	
+	public static void main(String [] args){
+		QuickSort quicksortArray = new QuickSort(10);	// Creating a array with 10 index
+		
+		quicksortArray.generateRandomArray();
+		System.out.println(Arrays.toString(QuickSort.theArray));	// Print out the sorted array
+		
+		//quicksortArray.quicksortArray(35); // 35 is being defined as the pivot
+		
+		System.out.println(Arrays.toString(QuickSort.theArray));	// Print ut the sorted array
+
+	}
+
+
+public void QuickSort(int pivot){  	// Used the partition the the array
+	int leftpointer = -1;			// I am using this to sort through the array until it finds a item that is greater than the pivot
+	int rightpointer = 	arraySize;	// Using to find a item less than the pivot
+	while(true){					// Cycle through the array until a item bigger than the pivot is found
+		while(leftpointer < (arraySize - 1) && theArray[++leftpointer]<pivot) // Cycling through to find a value greater than or equal to the pivot
+			;
+		
+		//printHorzArray(leftpointer,rightpointer);
+		System.out.println(theArray[leftpointer] + "in index" + leftpointer + "is bigger than the pivot value" + pivot);
+		
+		while(rightpointer > 0 && theArray[--rightpointer]>pivot) // Increments until the beginning is reached or a item smaller than the pivot is found
+			;
+		
+		//printHorzArray(leftpointer,rightpointer);
+		System.out.println(theArray[rightpointer] + "in index" + rightpointer + "is smaller than the pivot value" + pivot);
+		
+		if(leftpointer >= rightpointer){
+			break;
+		}else{
+			swapValues(leftpointer, rightpointer);
+			
+			System.out.println(theArray[leftpointer] + "in index" + theArray[leftpointer] + " was swapped for " + theArray[rightpointer] );
+			
+		}
+		
+	}
+	// The two items will then be switched
+	
+}
+
+public void swapValues(int leftIndex, int rightIndex) {		// Methods to swap values in the left and right pointer
+	int temp = theArray[leftIndex];
+	theArray[leftIndex] = theArray[rightIndex];
+	theArray[rightIndex] = temp;
+	
+}
+
+QuickSort(int newArraySize){
+	arraySize = newArraySize;		//Constructor
+	theArray = new int[arraySize];
+	generateRandomArray();
+	}
+
+public void generateRandomArray() {		// Method used to generate a random Array
+	for(int i = 0;i<arraySize; i++){
+		// Generate a random array between 10 and 59
+		theArray[i] = (int)(Math.random()*50) + 10;
+	  }
+  }
+	
+}
+
+
+
