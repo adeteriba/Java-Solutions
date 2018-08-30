@@ -1,3 +1,7 @@
+/*
+Enter a number and have the program generate PI up to that many decimal places. 
+*/
+
 import java.util.*;
 import java.math.BigDecimal;
 
